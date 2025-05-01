@@ -17,7 +17,6 @@ const xAxisGroup = graph.append("g")
     .attr("transform", `translate(0, ${graphHeight})`);
 const yAxisGroup = graph.append("g");
 
-// Add x-axis label
 xAxisGroup.append("text")
     .attr("x", graphWidth / 2)
     .attr("y", 50)
@@ -26,7 +25,6 @@ xAxisGroup.append("text")
     .style("font-size", "14px")
     .text("Year");
 
-// Add y-axis label
 yAxisGroup.append("text")
     .attr("x", -graphHeight / 2)
     .attr("y", -50)
@@ -61,17 +59,17 @@ Promise.all([
 
     countries.forEach(country => {
         country.data.forEach(item => {
-            item.date = +item.date; // convert year to a number
-            item.value = +item.value; // convert the value to a number
+            item.date = +item.date;
+            item.value = +item.value;
         });
 
         country.data = country.data.filter(item => item.value !== null && !isNaN(item.value) && !isNaN(item.date) && item.date < 2024); // filter the data
 
-        country.data.sort((a, b) => a.date - b.date); // sort the year
+        country.data.sort((a, b) => a.date - b.date);
     });
 
 
-    const allData = countries.flatMap(country => country.data); // combine the data
+    const allData = countries.flatMap(country => country.data); 
     const x = d3.scaleLinear()
         .domain(d3.extent(allData, d => d.date))
         .range([0, graphWidth]);
@@ -80,7 +78,7 @@ Promise.all([
         .domain([0, d3.max(allData, d => d.value)])
         .range([graphHeight, 0]);
 
-    const xAxis = d3.axisBottom(x).tickFormat(d3.format("d")); // format years as integers
+    const xAxis = d3.axisBottom(x).tickFormat(d3.format("d"));
     const yAxis = d3.axisLeft(y);
 
     xAxisGroup.call(xAxis);
@@ -98,17 +96,6 @@ Promise.all([
             .attr("stroke", country.color)
             .attr("stroke-width", 3)
             .attr("d", line)
-            // .attr("stroke-dasharray", function() {
-            //     const length = this.getTotalLength();
-            //     return `${length} ${length}`;
-            // })
-            // .attr("stroke-dashoffset", function() {
-            //     return this.getTotalLength();
-            // })
-            // .transition()
-            // .duration(2000)
-            // .ease(d3.easeLinear)
-            // .attr("stroke-dashoffset", 0);
 
         const totalLength = path.node().getTotalLength(); // Get the total length of the path
 
@@ -137,9 +124,9 @@ Promise.all([
 
         countries.forEach((country, i) => {
             const legendRow = legendGroup.append("g")
-                .attr("transform", `translate(0, ${i * 20})`); // Position each legend item vertically
+                .attr("transform", `translate(0, ${i * 20})`);
 
-            legendRow.append("rect") // Add colored rectangle for the legend
+            legendRow.append("rect")
                 .attr("width", 10)
                 .attr("height", 10)
                 .attr("fill", country.color);
