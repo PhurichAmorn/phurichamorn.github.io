@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate of Birth</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+</head>
+<body>
+    <div id=""intro class="outer-margin">
+        <h2 class = "title">Countries Rate Of Birth Comparison</h2>
+        <p>This is an <strong>interactive line graph</strong> that visualized the birth rate of <i>Thailand, Vietnam, China</i>, and <i>Japan</i> from the year 1975 to 2023. </p>
+    </div>
+    <div class = "buttons">
+        <a href = "bar.html">Population Comparison</a>
+    </div>
+    <div class="canva"></div>
+
+    <footer class = "footer">
+        <p>Data Source: 
+            <br><a href="https://api.worldbank.org/v2/countries/THA/indicators/SP.DYN.CBRT.IN?format=json" target="_blank">World Bank API for Thailand's Rate of Birth</a>
+            <br><a href="https://api.worldbank.org/v2/countries/JPN/indicators/SP.DYN.CBRT.IN?format=json" target="_blank">World Bank API for Japan's Rate of Birth</a>
+            <br><a href="https://api.worldbank.org/v2/countries/CHN/indicators/SP.DYN.CBRT.IN?format=json" target="_blank">World Bank API for China's Rate of Birth</a>
+            <br><a href="https://api.worldbank.org/v2/countries/VNM/indicators/SP.DYN.CBRT.IN?format=json" target="_blank">World Bank API for Vietnam's Rate of Birth</a>
+        </p>
+    </footer>
+
+</body>
+
+<script src="app.js"></script>
+</html>

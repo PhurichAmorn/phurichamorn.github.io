@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.outer-margin {
+    padding: 1.5rem 0;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.outer-margin h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.outer-margin p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.footer {
+    background-color: white;
+    color: #64748b;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.canva {
+    margin: 20px auto;
+    display: block;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0,0.2)
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #1e3a8a;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid #1e3a8a;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin: 10px;
+}
+
+.buttons a:hover {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 8px;
+    font: 12px Arial, sans-serif;
+    background: #f9f9f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.start-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.start-page .header {
+    max-width: 600px;
+    text-align: center; 
+    margin: 0;
+}
+
+.start-page .header h1 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.start-page .header p {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.buttons .start-button {
+    text-decoration: none;
+    color: #1e3a8a;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid #1e3a8a;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttons .start-button:hover {
+    background-color: #1e3a8a;
+    color: white;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+</head>
+<body>
+    <div id=""intro class="outer-margin">
+        <h2 class = "title">Population Bar Chart</h2>
+        <p>This is an <strong>interactive bar chart</strong> that visualized the population of <i>Thailand, Vietnam, China</i>, and <i>Japan</i> in the year 2023. </p>
+    </div>
+    <div class = "buttons">
+        <a href = "line.html">Birth Rate Comparison</a>
+    </div>
+    <div class="canva"></div>
+
+    <footer class = "footer">
+        <p>Data Source: 
+            <br><a href="https://api.worldbank.org/v2/countries/THA/indicators/SP.POP.TOTL?format=json&mrv=1" target="_blank">World Bank API for Thailand's Population</a>
+            <br><a href="https://api.worldbank.org/v2/countries/JPN/indicators/SP.POP.TOTL?format=json&mrv=1" target="_blank">World Bank API for Japan's Population</a>
+            <br><a href="https://api.worldbank.org/v2/countries/CHN/indicators/SP.POP.TOTL?format=json&mrv=1" target="_blank">World Bank API for China's Population</a>
+            <br><a href="https://api.worldbank.org/v2/countries/VNM/indicators/SP.POP.TOTL?format=json&mrv=1" target="_blank">World Bank API for Vietnam's Population</a>
+        </p>
+    </footer>
+    
+</body>
+
+<script src="bar.js"></script>
+</html>
