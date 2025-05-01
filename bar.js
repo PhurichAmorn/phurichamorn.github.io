@@ -19,10 +19,10 @@ const populationTooltip = d3.tip()
 graph.call(populationTooltip);
 
 Promise.all([
-    d3.json('https://api.worldbank.org/v2/countries/THA/indicators/SP.POP.TOTL?format=json'),
-    d3.json('https://api.worldbank.org/v2/countries/VNM/indicators/SP.POP.TOTL?format=json'),
-    d3.json('https://api.worldbank.org/v2/countries/JPN/indicators/SP.POP.TOTL?format=json'),
-    d3.json('https://api.worldbank.org/v2/countries/CHN/indicators/SP.POP.TOTL?format=json'),
+    d3.json('https://api.worldbank.org/v2/countries/THA/indicators/SP.POP.TOTL?format=json&mrv=1'),
+    d3.json('https://api.worldbank.org/v2/countries/VNM/indicators/SP.POP.TOTL?format=json&mrv=1'),
+    d3.json('https://api.worldbank.org/v2/countries/JPN/indicators/SP.POP.TOTL?format=json&mrv=1'),
+    d3.json('https://api.worldbank.org/v2/countries/CHN/indicators/SP.POP.TOTL?format=json&mrv=1'),
 ]).then(([thaiPopData, vietnamData, japanPopData, chinaPopData]) => {
     const popCountries = [
         {name: "Thailand", population: thaiPopData[1][0].value, color: "blue"},
